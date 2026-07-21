@@ -1,0 +1,11 @@
+{
+  "name": "mistbits-reserve",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Concept website for Mistbits Reserve — connected field intelligence for farms, game farms and reserves.",
+  "scripts": {
+    "dev": "python3 -m http.server 4174",
+    "start": "python3 -m http.server 4174",
+    "check": "node scripts/validate.mjs"
+  }
+}

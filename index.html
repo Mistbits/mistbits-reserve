@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en-ZA">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mistbits Reserve connects water, security and field operations across farms and game reserves with rugged V3 loggers and a long-range Meshtastic mesh.">
+    <meta name="theme-color" content="#172019">
+    <meta property="og:title" content="Mistbits Reserve — Know what is happening out there">
+    <meta property="og:description" content="One resilient field network for water, gates, fences, pumps, weather and reserve operations.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mistbits.github.io/mistbits-reserve/">
+    <meta property="og:image" content="https://mistbits.github.io/mistbits-reserve/assets/images/reserve-hero.jpg">
+    <title>Mistbits Reserve — Field intelligence for wild places</title>
+    <link rel="canonical" href="https://mistbits.github.io/mistbits-reserve/">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preload" as="image" href="assets/images/reserve-hero.jpg" fetchpriority="high">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" data-header>
+      <div class="shell site-header__inner">
+        <a class="brand" href="#top" aria-label="Mistbits Reserve home">
+          <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true">
+            <path d="M7 31V12l15 12 15-12v19"></path>
+            <circle cx="7" cy="12" r="2.4"></circle>
+            <circle cx="22" cy="24" r="2.4"></circle>
+            <circle cx="37" cy="12" r="2.4"></circle>
+            <circle cx="7" cy="31" r="2.4"></circle>
+            <circle cx="37" cy="31" r="2.4"></circle>
+          </svg>
+          <span class="brand__name">mistbits</span>
+          <span class="brand__product">reserve</span>
+        </a>
+
+        <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+          <span></span><span></span>
+        </button>
+
+        <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation" data-nav>
+          <a href="#system">The system</a>
+          <a href="#possibilities">Possibilities</a>
+          <a href="#field-node">Field node</a>
+          <button class="button button--small button--light" type="button" data-open-pilot>Plan a pilot <span aria-hidden="true">↗</span></button>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <img class="hero__image" src="assets/images/reserve-hero.jpg" alt="A South African reserve at dawn with elephants at a waterhole and discreet solar monitoring nodes" width="1823" height="863" fetchpriority="high">
+        <div class="hero__shade"></div>
+        <div class="shell hero__inner">
+          <div class="hero__copy reveal is-visible">
+            <p class="eyebrow eyebrow--light"><span></span> Field intelligence for wild places</p>
+            <h1 id="hero-title">Know what’s<br>happening <em>out there.</em></h1>
+            <p class="hero__lede">Mistbits Reserve connects water, security and operations across thousands of hectares—without needing cellular coverage at every point.</p>
+            <div class="hero__actions">
+              <button class="button button--amber" type="button" data-open-pilot>Plan a pilot <span aria-hidden="true">↗</span></button>
+              <a class="button-link" href="#system">See how it works <span aria-hidden="true">↓</span></a>
+            </div>
+          </div>
+
+          <aside class="pulse-card reveal is-visible" aria-label="Concept live reserve status">
+            <div class="pulse-card__head">
+              <div>
+                <p>Reserve pulse</p>
+                <span>Concept live view</span>
+              </div>
+              <span class="live-indicator"><i></i> Live</span>
+            </div>
+            <div class="pulse-card__status">
+              <div class="pulse-card__score">
+                <svg viewBox="0 0 76 76" aria-hidden="true">
+                  <circle class="score-track" cx="38" cy="38" r="31"></circle>
+                  <circle class="score-value" cx="38" cy="38" r="31"></circle>
+                </svg>
+                <span>18<small>/18</small></span>
+              </div>
+              <div>
+                <strong>All nodes reporting</strong>
+                <span data-last-sync>Updated just now</span>
+              </div>
+            </div>
+            <div class="pulse-card__signals" aria-live="polite">
+              <button class="signal-row is-active" type="button" data-signal="water" aria-pressed="true">
+                <span class="signal-icon signal-icon--water" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M12 3s6 6.2 6 11a6 6 0 0 1-12 0c0-4.8 6-11 6-11Z"></path></svg>
+                </span>
+                <span><small>North reservoir</small><strong data-water-level>73% full</strong></span>
+                <i class="trend trend--up">+2.4%</i>
+              </button>
+              <button class="signal-row" type="button" data-signal="security" aria-pressed="false">
+                <span class="signal-icon signal-icon--gate" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><path d="M5 20V7l7-3 7 3v13M5 10h14M9 8v12m6-12v12"></path></svg>
+                </span>
+                <span><small>Perimeter &amp; gates</small><strong>All secure</strong></span>
+                <i class="trend">12 zones</i>
+              </button>
+              <button class="signal-row" type="button" data-signal="mesh" aria-pressed="false">
+                <span class="signal-icon signal-icon--mesh" aria-hidden="true">
+                  <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"></circle><circle cx="5" cy="6" r="2"></circle><circle cx="19" cy="6" r="2"></circle><circle cx="5" cy="19" r="2"></circle><path d="m6.5 7.3 4 3.4m3-3.9-1 3.3M6.7 17.7l3.8-4.1m3.2-.7 4-5.1"></path></svg>
+                </span>
+                <span><small>Meshtastic mesh</small><strong>Healthy</strong></span>
+                <i class="trend">4 hops max</i>
+              </button>
+            </div>
+          </aside>
+
+          <div class="hero__foot">
+            <div><small>Coverage</small><strong>Mesh beyond mobile signal</strong></div>
+            <div><small>Built on</small><strong>Mistbits Logger V3</strong></div>
+            <div><small>Designed for</small><strong>Farms · Reserves · Conservancies</strong></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="foundation section" aria-labelledby="foundation-title">
+        <div class="shell foundation__grid">
+          <div class="foundation__intro reveal">
+            <p class="eyebrow"><span></span> A natural next step</p>
+            <h2 id="foundation-title">Born from water.<br>Built for the whole reserve.</h2>
+          </div>
+          <div class="foundation__copy reveal">
+            <p class="foundation__lead">Smarta already brings remote pumps, boreholes and reservoirs into one dependable operation. Reserve takes that field experience—and the new V3 logger—much further.</p>
+            <p>Every node can sense locally, keep a record when the network disappears, and pass essential data across a low-power Meshtastic mesh until it reaches a gateway. One gateway can then carry the whole reserve into the Mistbits cloud.</p>
+            <div class="heritage-strip" aria-label="Product foundation">
+              <div class="heritage-mark heritage-mark--smarta">
+                <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3c4.8 5.6 8 9.2 8 14a8 8 0 1 1-16 0c0-4.8 3.2-8.4 8-14Z"></path><path d="M11 18c1.8 2.2 4 3.2 7.7 2.7"></path></svg>
+                <span><small>Proven platform</small><strong>Smarta</strong></span>
+              </div>
+              <span class="heritage-plus">+</span>
+              <div class="heritage-mark">
+                <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="7" cy="16" r="2.5"></circle><circle cx="16" cy="7" r="2.5"></circle><circle cx="25" cy="13" r="2.5"></circle><circle cx="20" cy="25" r="2.5"></circle><path d="m9 14 5-5m4-.7 5 3.6M24 15l-3 8m-3.2.7-9-6.5"></path></svg>
+                <span><small>New field hardware</small><strong>Logger V3</strong></span>
+              </div>
+              <span class="heritage-equals">=</span>
+              <div class="heritage-result">Mistbits <strong>Reserve</strong></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="system section section--dark" id="system" aria-labelledby="system-title">
+        <div class="shell section-heading section-heading--split reveal">
+          <div>
+            <p class="eyebrow eyebrow--light"><span></span> One resilient field network</p>
+            <h2 id="system-title">From the furthest fence<br>to one clear view.</h2>
+          </div>
+          <p>Small, solar-ready nodes listen to what matters. The mesh carries it over the horizon. Mistbits turns it into alerts, trends and action.</p>
+        </div>
+
+        <div class="shell system-map reveal">
+          <img src="assets/images/reserve-mesh-overview.jpg" alt="Isometric concept of sensor nodes connecting water, gate, fence and lookout points to a reserve operations lodge" width="1536" height="1024" loading="lazy" decoding="async">
+          <button class="map-pin map-pin--water" type="button" data-map-pin="water" aria-label="View water monitoring point"><span>01</span><i>Water point</i></button>
+          <button class="map-pin map-pin--fence" type="button" data-map-pin="fence" aria-label="View fence monitoring point"><span>02</span><i>Fence line</i></button>
+          <button class="map-pin map-pin--gate" type="button" data-map-pin="gate" aria-label="View gate monitoring point"><span>03</span><i>Gate</i></button>
+          <button class="map-pin map-pin--gateway" type="button" data-map-pin="gateway" aria-label="View mesh gateway"><span>04</span><i>Gateway</i></button>
+          <div class="map-detail" data-map-detail aria-live="polite">
+            <span data-map-number>01 / FIELD NODE</span>
+            <h3 data-map-title>Water point</h3>
+            <p data-map-copy>Level, flow, pump state and water quality—measured where the water is, not where the signal stops.</p>
+          </div>
+        </div>
+
+        <div class="shell flow-strip reveal" aria-label="How the system works">
+          <article>
+            <span>01</span>
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 4v8m0 8v8M4 16h8m8 0h8"></path><circle cx="16" cy="16" r="4"></circle><circle cx="16" cy="4" r="2"></circle><circle cx="28" cy="16" r="2"></circle><circle cx="16" cy="28" r="2"></circle><circle cx="4" cy="16" r="2"></circle></svg>
+            <div><small>Sense</small><strong>Any useful signal</strong><p>Level, flow, contact, pulse, power, rainfall, pressure or quality.</p></div>
+          </article>
+          <i class="flow-arrow" aria-hidden="true">→</i>
+          <article>
+            <span>02</span>
+            <svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="7" cy="17" r="3"></circle><circle cx="17" cy="8" r="3"></circle><circle cx="25" cy="21" r="3"></circle><path d="m9.3 15 5.4-5m4.4.7 4.2 7.5M10 18l12 2.5"></path></svg>
+            <div><small>Move</small><strong>Hop across the mesh</strong><p>Data finds a route through nearby nodes with acknowledgement and retry.</p></div>
+          </article>
+          <i class="flow-arrow" aria-hidden="true">→</i>
+          <article>
+            <span>03</span>
+            <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M5 25h22M8 21l5-6 4 3 7-10"></path><circle cx="24" cy="8" r="2"></circle></svg>
+            <div><small>Understand</small><strong>See what needs action</strong><p>One platform turns readings into alerts, reports, trends and control.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="possibilities section" id="possibilities" aria-labelledby="possibilities-title">
+        <div class="shell section-heading reveal">
+          <p class="eyebrow"><span></span> Start with what costs you sleep</p>
+          <h2 id="possibilities-title">One network.<br>Dozens of useful jobs.</h2>
+          <p>Each deployment starts with a real operational problem. Add sensors over time without building another disconnected system.</p>
+        </div>
+
+        <div class="shell capability-grid">
+          <article class="capability-card capability-card--feature reveal">
+            <img src="assets/images/waterpoint-monitoring.jpg" alt="Zebra and antelope drinking at a remotely monitored reserve water point" width="1788" height="880" loading="lazy" decoding="async">
+            <div class="capability-card__overlay">
+              <span class="card-index">01</span>
+              <div><p>Water intelligence</p><h3>Know before the trough runs dry.</h3></div>
+              <button class="round-button" type="button" data-open-detail="water" aria-label="Read more about water intelligence">↗</button>
+            </div>
+          </article>
+
+          <article class="capability-card capability-card--sand reveal">
+            <span class="card-index">02</span>
+            <svg class="capability-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M9 39V13l15-5 15 5v26M9 20h30M17 11v28m14-28v28"></path><circle cx="34" cy="26" r="2"></circle></svg>
+            <div><p>Gates &amp; assets</p><h3>A quiet alarm when something moves.</h3><span>Magnetic contact · vibration · tilt · power loss</span></div>
+            <button class="round-button round-button--dark" type="button" data-open-detail="security" aria-label="Read more about gates and assets">↗</button>
+          </article>
+
+          <article class="capability-card capability-card--olive reveal">
+            <span class="card-index">03</span>
+            <svg class="capability-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M8 35c7-15 14-22 24-22 5 0 8 2 8 5 0 4-5 7-11 7h-7"></path><path d="M15 32c6 1 13 3 20 8M30 13l3-7m-7 8-3-7"></path></svg>
+            <div><p>Wildlife &amp; livestock</p><h3>Patterns, presence and safer movement.</h3><span>Water visits · corridor counts · collar gateways</span></div>
+            <button class="round-button" type="button" data-open-detail="wildlife" aria-label="Read more about wildlife and livestock">↗</button>
+          </article>
+
+          <article class="capability-card capability-card--ink reveal">
+            <span class="card-index">04</span>
+            <svg class="capability-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M25 5c2 8-3 10 1 16 3-2 4-5 4-8 7 6 10 12 8 19-2 7-8 11-15 11S10 38 10 30c0-7 4-12 9-17 0 5 1 8 3 10 3-5 1-10 3-18Z"></path></svg>
+            <div><p>Fire &amp; weather</p><h3>Read the conditions. Act earlier.</h3><span>Rain · wind · humidity · temperature · smoke inputs</span></div>
+            <button class="round-button" type="button" data-open-detail="climate" aria-label="Read more about fire and weather">↗</button>
+          </article>
+
+          <article class="capability-card capability-card--paper reveal">
+            <span class="card-index">05</span>
+            <svg class="capability-icon" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="17"></circle><path d="M24 14v20M14 24h20"></path><circle cx="24" cy="24" r="5"></circle></svg>
+            <div><p>Pumps &amp; energy</p><h3>Protect the infrastructure you rely on.</h3><span>Runtime · flow · power · pressure · remote relay</span></div>
+            <button class="round-button round-button--dark" type="button" data-open-detail="pumps" aria-label="Read more about pumps and energy">↗</button>
+          </article>
+
+          <article class="capability-card capability-card--line reveal">
+            <span class="card-index">06</span>
+            <svg class="capability-icon" viewBox="0 0 48 48" aria-hidden="true"><path d="M7 25h34M24 8v34"></path><circle cx="24" cy="25" r="8"></circle><circle cx="8" cy="25" r="3"></circle><circle cx="40" cy="25" r="3"></circle><circle cx="24" cy="8" r="3"></circle><circle cx="24" cy="42" r="3"></circle></svg>
+            <div><p>Make it yours</p><h3>If a sensor can measure it, Reserve can carry it.</h3><span>Modular pilots for the realities of your land</span></div>
+            <button class="round-button round-button--dark" type="button" data-open-pilot aria-label="Plan a custom pilot">↗</button>
+          </article>
+        </div>
+      </section>
+
+      <section class="field-story section" aria-labelledby="field-story-title">
+        <div class="shell field-story__grid">
+          <figure class="field-story__image reveal">
+            <img src="assets/images/gate-tamper-alert.jpg" alt="A ranger checking a gate sensor at dawn in a remote reserve" width="1536" height="1024" loading="lazy" decoding="async">
+            <figcaption><span>04:42</span> Gate 07 · Northern boundary</figcaption>
+          </figure>
+          <div class="field-story__copy reveal">
+            <p class="eyebrow"><span></span> Alerts with context</p>
+            <h2 id="field-story-title">Not every alarm<br>deserves a midnight drive.</h2>
+            <p>A gate opening is just a signal. Reserve adds the context: which gate, when it moved, whether the nearby node is still healthy, and what happened immediately before and after.</p>
+            <blockquote>“Gate 07 opened outside schedule. Vibration detected. Node online. Ranger team notified.”</blockquote>
+            <ul class="check-list">
+              <li><span>01</span> Immediate event traffic, not the next scheduled upload</li>
+              <li><span>02</span> Local records survive a lost gateway or mobile network</li>
+              <li><span>03</span> Push, Telegram and operational escalation paths</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="field-node section section--bone" id="field-node" aria-labelledby="field-node-title">
+        <div class="shell field-node__grid">
+          <div class="field-node__visual reveal">
+            <img src="assets/images/v3-field-node.jpg" alt="Concept installation of a rugged solar-powered Mistbits V3 field logger" width="1536" height="1024" loading="lazy" decoding="async">
+            <span class="image-note">V3 field installation · concept enclosure</span>
+          </div>
+          <div class="field-node__copy reveal">
+            <p class="eyebrow"><span></span> The field node</p>
+            <h2 id="field-node-title">The logger we know.<br>Ready for rougher work.</h2>
+            <p class="field-node__lead">Reserve is built around the real Mistbits Logger V3 architecture—not a pretend piece of concept hardware.</p>
+            <div class="spec-list">
+              <article>
+                <span>01</span>
+                <div><h3>Three ways home</h3><p>Meshtastic mesh, GSM or Wi-Fi transport—configured for the site and its gaps.</p></div>
+              </article>
+              <article>
+                <span>02</span>
+                <div><h3>Useful field I/O</h3><p>Dual analogue channels, digital input, pulse counting, sensor power and relay control.</p></div>
+              </article>
+              <article>
+                <span>03</span>
+                <div><h3>Doesn’t forget</h3><p>Flash-backed queues, app-level acknowledgements and safe retry when links are unreliable.</p></div>
+              </article>
+              <article>
+                <span>04</span>
+                <div><h3>Visible health</h3><p>Battery, signal, uptime, storage and mesh utilisation travel with the sensor data.</p></div>
+              </article>
+            </div>
+            <div class="tech-tags" aria-label="Technical capabilities">
+              <span>RP2350</span><span>BLE setup</span><span>DS3231 RTC</span><span>4–20 mA ready</span><span>Store &amp; forward</span><span>Remote relay</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="ideas section" aria-labelledby="ideas-title">
+        <div class="shell ideas__heading reveal">
+          <p class="eyebrow"><span></span> The interesting part</p>
+          <h2 id="ideas-title">What else could<br>the land tell you?</h2>
+          <p>Ideas worth prototyping once the network is in place.</p>
+        </div>
+        <div class="idea-rail reveal" aria-label="Future pilot concepts">
+          <article><span>01</span><h3>Waterhole rhythm</h3><p>Correlate tank drawdown with camera or beam counts to understand animal visits without watching hours of footage.</p><small>Level + flow + count</small></article>
+          <article><span>02</span><h3>Fence fault finder</h3><p>Divide an electric fence into monitored zones so a team searches hundreds of metres, not kilometres.</p><small>Voltage + zone health</small></article>
+          <article><span>03</span><h3>Silent pump watch</h3><p>Catch a pump running without flow, drawing abnormal power or cycling too often before it becomes a failure.</p><small>Pulse + power + logic</small></article>
+          <article><span>04</span><h3>Microclimate map</h3><p>See rainfall and fire conditions across the property instead of relying on the gauge beside the office.</p><small>Rain + RH + wind</small></article>
+          <article><span>05</span><h3>Mobile field check-in</h3><p>Let a ranger’s nearby node pass a low-bandwidth check-in or task event through the reserve mesh.</p><small>BLE + mesh event</small></article>
+        </div>
+      </section>
+
+      <section class="pilot section" aria-labelledby="pilot-title">
+        <div class="shell pilot__card reveal">
+          <img src="assets/images/reserve-hero.jpg" alt="" width="1823" height="863" loading="lazy" decoding="async">
+          <div class="pilot__shade"></div>
+          <div class="pilot__copy">
+            <p class="eyebrow eyebrow--light"><span></span> Start with one real problem</p>
+            <h2 id="pilot-title">Choose a water point.<br>A gate. A blind spot.</h2>
+            <p>We’ll map a small pilot around your land, your coverage and the decision you need to make sooner.</p>
+            <button class="button button--amber" type="button" data-open-pilot>Plan a Reserve pilot <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="pilot__meta"><span>Designed &amp; built in South Africa</span><span>hello@mistbits.com</span></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="shell site-footer__top">
+        <a class="brand brand--footer" href="#top" aria-label="Mistbits Reserve home">
+          <svg class="brand__mark" viewBox="0 0 44 44" aria-hidden="true"><path d="M7 31V12l15 12 15-12v19"></path><circle cx="7" cy="12" r="2.4"></circle><circle cx="22" cy="24" r="2.4"></circle><circle cx="37" cy="12" r="2.4"></circle><circle cx="7" cy="31" r="2.4"></circle><circle cx="37" cy="31" r="2.4"></circle></svg>
+          <span class="brand__name">mistbits</span><span class="brand__product">reserve</span>
+        </a>
+        <p>Quiet infrastructure.<br>Clearer decisions.</p>
+      </div>
+      <div class="shell site-footer__bottom">
+        <span>© 2026 Mistbits · South Africa</span>
+        <nav aria-label="Footer navigation"><a href="#system">System</a><a href="#possibilities">Possibilities</a><a href="mailto:hello@mistbits.com">Email us</a></nav>
+        <span>Concept product website</span>
+      </div>
+    </footer>
+
+    <dialog class="pilot-dialog" data-pilot-dialog aria-labelledby="dialog-title">
+      <div class="dialog__visual" aria-hidden="true">
+        <img src="assets/images/reserve-mesh-overview.jpg" alt="" width="1536" height="1024">
+        <div><span>Mistbits Reserve</span><p>Start small.<br>Learn from the land.<br>Build from there.</p></div>
+      </div>
+      <div class="dialog__body">
+        <button class="dialog__close" type="button" aria-label="Close pilot enquiry" data-close-pilot>×</button>
+        <p class="eyebrow"><span></span> Pilot enquiry</p>
+        <h2 id="dialog-title">What should we connect first?</h2>
+        <p>Tell us enough to start a useful conversation. This opens a pre-filled email—nothing is uploaded from this concept site.</p>
+        <form data-pilot-form>
+          <label>Name <input type="text" name="name" autocomplete="name" required placeholder="Your name"></label>
+          <label>Email <input type="email" name="email" autocomplete="email" required placeholder="you@example.com"></label>
+          <label>Property type
+            <select name="property">
+              <option>Game reserve / conservancy</option>
+              <option>Game farm</option>
+              <option>Farm / livestock</option>
+              <option>Lodge / remote property</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>First problem to solve
+            <select name="problem" data-problem-select>
+              <option>Water levels, flow or pump monitoring</option>
+              <option>Gate, theft or asset alarms</option>
+              <option>Fence monitoring</option>
+              <option>Weather or fire risk</option>
+              <option>Wildlife or livestock sensing</option>
+              <option>A custom sensor idea</option>
+            </select>
+          </label>
+          <label class="form-wide">A little context <textarea name="context" rows="4" placeholder="Property size, location, current coverage, and what keeps going wrong…"></textarea></label>
+          <button class="button button--ink form-wide" type="submit">Continue by email <span aria-hidden="true">↗</span></button>
+        </form>
+      </div>
+    </dialog>
+
+    <dialog class="detail-dialog" data-detail-dialog aria-labelledby="detail-title">
+      <button class="dialog__close" type="button" aria-label="Close detail" data-close-detail>×</button>
+      <span class="detail-dialog__number" data-detail-number>01</span>
+      <p class="eyebrow"><span></span> Pilot module</p>
+      <h2 id="detail-title" data-detail-title>Water intelligence</h2>
+      <p class="detail-dialog__lead" data-detail-lead>Know what is stored, what is moving and whether the system is behaving normally.</p>
+      <div class="detail-dialog__grid">
+        <div><small>Possible inputs</small><p data-detail-inputs>Level · flow · pressure · pump state · water quality</p></div>
+        <div><small>Useful outcomes</small><p data-detail-outcomes>Low-level warning · leak pattern · no-flow alarm · daily balance</p></div>
+      </div>
+      <button class="button button--ink" type="button" data-detail-pilot>Explore this pilot <span aria-hidden="true">↗</span></button>
+    </dialog>
+  </body>
+</html>
