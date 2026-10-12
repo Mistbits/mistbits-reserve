@@ -2,9 +2,10 @@ version: 2
 updates:
   - package-ecosystem: npm
     schedule:
-      interval: daily
+      interval: weekly
       time: "06:00"
       timezone: Africa/Johannesburg
+      day: monday
     directory: /
     open-pull-requests-limit: 5
     groups:
