@@ -7,5 +7,8 @@
     "dev": "python3 -m http.server 4174",
     "start": "python3 -m http.server 4174",
     "check": "node scripts/validate.mjs"
+  },
+  "engines": {
+    "node": "^24.22.1 || ^26.12.1"
   }
 }
